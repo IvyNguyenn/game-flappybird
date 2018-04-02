@@ -235,7 +235,7 @@ namespace FlappyBird
             {
                 timerCotNuoc.Start();
                 timerBird.Start();
-                ybrid -= 30;
+                ybrid -= 35;
                 this.Bird.BackgroundImage = new Bitmap(Properties.Resources.Bird2);
                 this.Bird.BackColor = Color.Transparent;
                 this.Bird.Location = new Point(50, ybrid);
