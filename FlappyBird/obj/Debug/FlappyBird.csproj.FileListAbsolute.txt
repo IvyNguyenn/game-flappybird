@@ -1,0 +1,10 @@
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe.config
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\bin\Debug\FlappyBird.pdb
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csprojResolveAssemblyReference.cache
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.Properties.Resources.resources
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.GenerateResource.cache
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.CoreCompileInputs.cache
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.exe
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.pdb
+D:\HocTap\Windows_programming\tuan 4\DoAn_Game\FlappyBird\FlappyBird\obj\Debug\FlappyBird.FlappyBird.resources
