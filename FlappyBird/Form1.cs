@@ -36,8 +36,8 @@ namespace FlappyBird
 
         int x = 300, x1 = 565;
         int ybrid = 100; //Toa do Y cua Bird : 100;
-        int randyT = -360, randyT1 = -360;
-        int randyD = 260, randyD1 = 260;
+        int randyT = -360, randyT1 = -360;// Tọa độ ống nước trên 
+        int randyD = 260, randyD1 = 260;// Tọa độ ống nước dưới
         int Cot = 300, Cot1 = 565;// tọa độ cột nước
         int diem = 0;
         bool flag = false, flagBird = false;
@@ -103,7 +103,6 @@ namespace FlappyBird
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //pnGame.Hide();
             TaoBird();
             TaoNenDat();
             TaoOng();
@@ -354,14 +353,12 @@ namespace FlappyBird
                 timerBird.Interval = 10;
                 x = 300; x1 = 565;
                 ybrid = 100; //Toa do Y cua Bird : 100;
-                randyT = -370;
-                randyT1 = -370;
-                randyD = 270; randyD1 = 270;
+                randyT = -360; randyT1 = -360;
+                randyD = 260; randyD1 = 260;
                 Cot = 300; Cot1 = 565;
                 diem = 0;
                 flag = false; flagBird = false;
                 flag1 = true; flag2 = false; flag3 = false; flag4 = false;
-                //pnGame.Show();//show panel game ra.
                 pbOver.Hide();
             }
         }
