@@ -31,14 +31,14 @@ namespace FlappyBird
         SoundPlayer msKetThuc = new SoundPlayer(Properties.Resources.fail);
         SoundPlayer msGame = new SoundPlayer(Properties.Resources.gamesound);
 
-        Label lbgame = new Label();
-        Random rd = new Random();
+        Label lbChiDan = new Label();
+        Random rand = new Random();
 
         int x = 300, x1 = 565;
         int ybrid = 100; //Toa do Y cua Bird : 100;
-        int rdyT = -350, rdyT1 = -350;
-        int rdyD = 250, rdyD1 = 250;
-        int saveC = 300, saveC1 = 565;
+        int randyT = -360, randyT1 = -360;
+        int randyD = 260, randyD1 = 260;
+        int Cot = 300, Cot1 = 565;// tọa độ cột nước
         int diem = 0;
         bool flag = false, flagBird = false;
         bool flag1 = true, flag2 = false, flag3 = false, flag4 = false;
@@ -93,12 +93,12 @@ namespace FlappyBird
 
         private void TaoLabelGame()
         {
-            lbgame.Location = new Point(130, 180);
-            lbgame.Size = new Size(300, 50);
-            lbgame.BackColor = Color.Transparent;
-            lbgame.Font = new Font("Tahoma", 16, FontStyle.Bold);
-            lbgame.Text = "Press F to play";
-            this.Controls.Add(lbgame);
+            lbChiDan.Location = new Point(230, 180);
+            lbChiDan.Size = new Size(300, 50);
+            lbChiDan.BackColor = Color.Transparent;
+            lbChiDan.Font = new Font("Tahoma", 16, FontStyle.Bold);
+            lbChiDan.Text = "Press F to play";
+            this.Controls.Add(lbChiDan);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -135,26 +135,26 @@ namespace FlappyBird
         private void timerCotNuoc_Tick(object sender, EventArgs e)
         {
             x -= 3;
-            saveC = x;
+            Cot = x;
             x1 -= 3;
-            saveC1 = x1;
+            Cot1 = x1;
 
 
-            OngncT.Location = new Point(x, rdyT);
-            OngncD.Location = new Point(x, rdyD);
-            OngncT1.Location = new Point(x1, rdyT1);
-            OngncD1.Location = new Point(x1, rdyD1);
+            OngncT.Location = new Point(x, randyT);
+            OngncD.Location = new Point(x, randyD);
+            OngncT1.Location = new Point(x1, randyT1);
+            OngncD1.Location = new Point(x1, randyD1);
             if (x <= -60)
             {
                 x = 500;
-                rdyT = rd.Next(-350, -300);
-                rdyD = rd.Next(270, 300);
+                randyT = rand.Next(-380, -310);
+                randyD = rand.Next(270, 330);
             }
             if (x1 <= -60)
             {
                 x1 = 500;
-                rdyT1 = rd.Next(-350, -300);
-                rdyD1 = rd.Next(270, 300);
+                randyT1 = rand.Next(-380, -310);
+                randyD1 = rand.Next(270, 330);
             }
             CongDiem();
         }
@@ -229,7 +229,7 @@ namespace FlappyBird
 
         private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            lbgame.Hide();
+            lbChiDan.Hide();
             pbReady.Hide();
             if (e.KeyCode == Keys.F)
             {
@@ -268,11 +268,11 @@ namespace FlappyBird
         private void XuLiVaCham()
         {
             //Xử lí va chạm cột trên dưới.
-            //saveC là tọa độ cột.
-            int X = saveC + 65;
-            if ((saveC <= 90 && saveC >= 50) && ybrid <= (rdyT + 500) ||
-                ((saveC + 65) <= 75 && (saveC + 65) >= 50 && ybrid <= (rdyT + 500)) ||
-                ((X + saveC) / 2 <= 75 && ((X + saveC) / 2) >= 50 && ybrid <= (rdyT + 500))
+            //Cot là tọa độ cột.
+            int X = Cot + 65;
+            if ((Cot <= 90 && Cot >= 50) && ybrid <= (randyT + 500) ||
+                ((Cot + 65) <= 75 && (Cot + 65) >= 50 && ybrid <= (randyT + 500)) ||
+                ((X + Cot) / 2 <= 75 && ((X + Cot) / 2) >= 50 && ybrid <= (randyT + 500))
                 )
             {
                 timerBird.Stop();
@@ -281,9 +281,9 @@ namespace FlappyBird
             }
 
 
-            else if (saveC <= 90 && saveC >= 50 && (ybrid + 45) >= rdyD ||
-                ((saveC + 65) <= 75 && (saveC + 65) >= 50 && (ybrid + 45) >= rdyD) ||
-                (((X + saveC) / 2) <= 75 && ((X + saveC) / 2) >= 50 && (ybrid + 45) >= rdyD)
+            else if (Cot <= 90 && Cot >= 50 && (ybrid + 45) >= randyD ||
+                ((Cot + 65) <= 75 && (Cot + 65) >= 50 && (ybrid + 45) >= randyD) ||
+                (((X + Cot) / 2) <= 75 && ((X + Cot) / 2) >= 50 && (ybrid + 45) >= randyD)
                 )
             {
                 timerBird.Stop();
@@ -293,10 +293,10 @@ namespace FlappyBird
 
 
             //Xử lí va chạm cột trên dưới 1.
-            int X1 = saveC1 + 65;
-            if ((saveC1 <= 90 && saveC1 >= 50) && ybrid <= (rdyT1 + 500) ||
-               ((saveC1 + 65) <= 75 && (saveC1 + 65) >= 50 && ybrid <= (rdyT1 + 500)) ||
-               ((X1 + saveC1) / 2 <= 75 && ((X1 + saveC1) / 2) >= 50 && ybrid <= (rdyT1 + 500))
+            int X1 = Cot1 + 65;
+            if ((Cot1 <= 90 && Cot1 >= 50) && ybrid <= (randyT1 + 500) ||
+               ((Cot1 + 65) <= 75 && (Cot1 + 65) >= 50 && ybrid <= (randyT1 + 500)) ||
+               ((X1 + Cot1) / 2 <= 75 && ((X1 + Cot1) / 2) >= 50 && ybrid <= (randyT1 + 500))
                )
             {
                 timerBird.Stop();
@@ -305,9 +305,9 @@ namespace FlappyBird
             }
 
 
-            else if (saveC1 <= 90 && saveC1 >= 50 && (ybrid + 45) >= rdyD1 ||
-                ((saveC1 + 65) <= 75 && (saveC1 + 65) >= 50 && (ybrid + 45) >= rdyD1) ||
-                (((X1 + saveC1) / 2) <= 75 && ((X1 + saveC1) / 2) >= 50 && (ybrid + 45) >= rdyD1)
+            else if (Cot1 <= 90 && Cot1 >= 50 && (ybrid + 45) >= randyD1 ||
+                ((Cot1 + 65) <= 75 && (Cot1 + 65) >= 50 && (ybrid + 45) >= randyD1) ||
+                (((X1 + Cot1) / 2) <= 75 && ((X1 + Cot1) / 2) >= 50 && (ybrid + 45) >= randyD1)
                 )
             {
                 timerBird.Stop();
@@ -334,7 +334,7 @@ namespace FlappyBird
             Bird.BackgroundImage = new Bitmap(Properties.Resources.BirdDie);
             Bird.BackgroundImageLayout = ImageLayout.Stretch;
             DialogResult dr = new DialogResult();
-            dr = MessageBox.Show("GAME OVER \n" + "Số điểm :  " + lbDiem.Text.ToString());
+            dr = MessageBox.Show("GAME OVER \n" + "Scores :  " + lbDiem.Text.ToString());
             if (dr == DialogResult.OK)
             {
                 timerBird.Stop();
@@ -343,7 +343,7 @@ namespace FlappyBird
                 TaoNenDat();
                 TaoOng();
                 TaoLabelGame();
-                lbgame.Show();
+                lbChiDan.Show();
                 pbReady.Show();
                 msGame.Play();
                 this.BackgroundImage = new Bitmap(Properties.Resources.BG);
@@ -354,10 +354,10 @@ namespace FlappyBird
                 timerBird.Interval = 10;
                 x = 300; x1 = 565;
                 ybrid = 100; //Toa do Y cua Bird : 100;
-                rdyT = -350;
-                rdyT1 = -350;
-                rdyD = 250; rdyD1 = 250;
-                saveC = 300; saveC1 = 565;
+                randyT = -370;
+                randyT1 = -370;
+                randyD = 270; randyD1 = 270;
+                Cot = 300; Cot1 = 565;
                 diem = 0;
                 flag = false; flagBird = false;
                 flag1 = true; flag2 = false; flag3 = false; flag4 = false;

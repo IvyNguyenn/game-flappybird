@@ -63,8 +63,8 @@
             this.lbDiem.Font = new System.Drawing.Font("Tahoma", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiem.Location = new System.Drawing.Point(358, 47);
             this.lbDiem.Name = "lbDiem";
-            this.lbDiem.Size = new System.Drawing.Size(45, 55);
-            this.lbDiem.TabIndex = 1;
+            this.lbDiem.Size = new System.Drawing.Size(90, 55);
+            this.lbDiem.TabIndex = 2;
             this.lbDiem.Text = "0";
             // 
             // pbOver
@@ -142,6 +142,7 @@
             this.Controls.Add(this.lbDiem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FlappyBird";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flappy Bird";
